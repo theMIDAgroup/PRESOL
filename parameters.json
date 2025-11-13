@@ -1,0 +1,36 @@
+{
+    "split_name": "GroupBy_Stratify_without_AR",
+    "selection_period": {
+        "name_column_time": "t_rec",
+        "start": "2012.01.01",
+        "end": "2012.02.01"
+    },
+    "column_active_region": "HARPNUM",
+    "parameters": {
+        "Random_without_Type": {
+            "perc_train": 0.7,
+            "random_state":null
+            },
+        "Balanced_Type": {
+            "flare_columns": ["TYPE_X","TYPE_M","TYPE_C"],
+            "rare_events":["TYPE_X","TYPE_M"],
+            "label_column":"Label",
+            "perc_train": 0.7,
+            "perc_relax": 0.8
+            },
+        "Cronological_Split":{
+            "train_periods":[["2012.01.01", "2012.01.05"], ["2012.01.20", "2012.02.01"]],
+            "test_periods":[["2012.01.05_06:00:00", "2012.01.20"]]
+        },
+        "GroupBy_Stratify":{
+            "label_column": "Label",
+            "random_state":42,
+            "test_size": 0.3
+        },
+        "GroupBy_Stratify_without_AR":{
+            "test_size" : 0.3,
+            "random_state" : 42,
+            "label_column" : "Label"
+        }
+    }
+}
