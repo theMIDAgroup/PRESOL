@@ -1,0 +1,15 @@
+astropy==6.1.7
+drms==0.9.0
+iterative_stratification==0.1.9
+joblib==1.5.1
+matplotlib==3.10.7
+numpy==2.3.5
+pandas==2.3.3
+psycopg2_binary==2.9.9
+pymongo==4.15.5
+scikit_learn==1.0.2
+scipy==1.16.3
+seaborn==0.13.2
+Shapely==2.1.2
+sunpy==7.1.0
+torch==2.4.1
